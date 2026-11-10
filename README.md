@@ -1,55 +1,50 @@
-🏎️ Pit Wall — GP de São Paulo 🏁
+# 🏎️ Pit Wall — GP de São Paulo 🏁
 
-Projeto de estudo desenvolvido para a LIMA focado na recriação da página temática do GP de São Paulo (Autódromo de Interlagos) utilizando HTML5 e CSS3 puro, priorizando design responsivo e boas práticas de layout.
+Projeto prático desenvolvido para o curso na **LIMA**, focado na criação de uma landing page responsiva sobre o **GP de São Paulo de Formula 1 (Autódromo de Interlagos)** utilizando **HTML5** e **CSS3** puros.
 
-📌 Sobre o Projeto
+---
 
-O objetivo fundamental deste trabalho foi construir uma landing page completa sobre o GP de São Paulo de Fórmula 1, garantindo fidelidade visual e adaptação fluida tanto para telas de desktop quanto para dispositivos móveis.
+## 📌 Sobre o Desafio
 
-🛠️ Tecnologias e Recursos Utilizados
+O objetivo principal deste projeto foi recriar a interface da página **Pit Wall** com base no layout proposto, garantindo fidelidade visual e perfeita adaptação em telas de computadores e dispositivos móveis.
 
-HTML5 Semantic: Tags estruturadas (<header>, <section>, <main>, <table>, <footer>, entre outras).
+---
 
-CSS3 Moderno:
+## 🧰 Recursos e Técnicas CSS Aplicados
 
-Variáveis (:root): Padronização de paleta de cores e especificidades de cada equipe (Ferrari, McLaren, Mercedes, Audi).
+* **`:root`**: Declaração de variáveis Globais para padronização de cores gerais e paleta temática das equipes (Ferrari, McLaren, Mercedes, Audi).
+* **Flexbox**: Layout do topo (`header`), seção principal (`hero`) e alinhamento dos filtros.
+* **CSS Grid (`auto-fit`)**: Organização responsiva dos cards dos pilotos.
+* **Form Grid**: Estruturação dos campos no formulário de reserva de ingressos.
+* **Tabelas Semânticas**: Estrutura com `<thead>` e `<tbody>` para a classificação do campeonato.
+* **Responsividade (`@media`)**: Regras de adaptação para telas menores (smartphones/tablets).
+* **Elementos Visuais**:
+  * Integração de fontes personalizadas via **Google Fonts** (*Titillium Web*).
+  * Imagem de fundo no hero.
+  * Renderização visual da zebra da pista (`repeating-linear-gradient`).
 
-Flexbox: Alinhamento e distribuição do topo (header), seção principal (hero) e área de filtros.
+---
 
-CSS Grid (Auto-Fit & Form Grid): Disposição responsiva e adaptável dos cards dos pilotos e formulário de reserva de ingressos.
+## 📂 Estrutura de Pastas
 
-Media Queries (@media): Ajustes de layout para visualização mobile.
-
-Efeitos Visuais: Gradientes inclinados no hero, efeito de zebra na pista (repeating-linear-gradient) e fontes personalizadas via Google Fonts (Titillium Web).
-
-📁 Estrutura de Pastas
-
+```text
 pit-wall/
 ├── index.html
 ├── styles.css
 └── img/
     └── piloto.jpg
+```
 
+---
 
-🚀 Como Visualizar o Projeto
+## ✍️ Autoria
 
-Clone este repositório para o seu computador:
+* **Projeto desenvolvido por:** Fernanda Folgoni
+* **Assinatura do Rodapé:** `PITWALL · Projeto de estudo de HTML e CSS · Feito por Fernanda Folgoni`
 
-git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+---
 
+## 🏆 Professores e Orientadores
 
-Abra a pasta do projeto.
-
-Clique duas vezes no arquivo index.html ou abra-o utilizando a extensão Live Server no VS Code.
-
-✍️ Autoria e Identificação
-
-Projeto desenvolvido por: Fernanda Folgoni
-
-PITWALL · Projeto de estudo de HTML e CSS
-
-🏆 Professores / Orientadores
-
-🥁 André Denani
-
-🧙🏻‍♂️ Raul Lopes
+* 🥁 **André Denani**
+* 🧙🏻‍♂️ **Raul Lopes**
