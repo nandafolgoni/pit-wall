@@ -1,0 +1,1005 @@
+:root {
+    --background: #0b0b0f;
+    --surface: #17171f;
+    --surface-light: #20202a;
+    --red: #ed0808;
+    --white: #f5f5f7;
+    --gray: #92929e;
+    --border: #292933;
+
+
+    /* Cores das equipes */
+    --ferrari: #ed174c;
+    --mclaren: #ff8700;
+    --mercedes: #00e5cf;
+    --audi: #aaaab4;
+}
+
+
+
+
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+
+
+/* =========================================
+   2. CABEÇALHO
+========================================= */
+
+
+.header {
+    width: 100%;
+    height: 61px;
+    padding: 0 3.7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+
+.logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+
+.logo span,
+.footer strong span {
+    color: var(--red);
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.nav a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+
+.nav a:hover {
+    color: var(--red);
+}
+
+
+.btn-comprar {
+    background-color: var(--red);
+    padding: 12px 23px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+
+.btn-comprar:hover,
+.btn-primary:hover,
+.btn-reserve:hover {
+    background-color: #b90000;
+}
+
+
+
+
+/* =========================================
+   3. BANNER PRINCIPAL
+========================================= */
+
+
+.hero {
+    min-height: 357px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero-content {
+    width: 59%;
+    padding: 62px 3.7% 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+.subtitulo {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+
+.hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(44px, 6.5vw, 62px);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
+
+
+.hero h1 span {
+    color: var(--red);
+}
+
+
+.hero-content p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 350px;
+    margin-top: 15px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 17px;
+}
+
+
+.btn-primary,
+.btn-secondary {
+    padding: 11px 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    border: 2px solid var(--white);
+    transition: 0.3s;
+}
+
+
+.btn-primary {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--background);
+}
+
+
+.hero-image {
+    width: 43%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+
+    background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 65%),
+        url("img/piloto.jpg");
+
+
+    background-size: cover;
+    background-position: center 55%;
+
+
+    border-left: 22px solid var(--red);
+    clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.hero-stats {
+    position: absolute;
+    bottom: 45px;
+    left: 24%;
+    right: 5%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero-stats strong {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+.hero-stats span {
+    color: #c4c4cc;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+
+
+/* =========================================
+   4. FAIXA QUADRICULADA
+========================================= */
+
+
+.racing-stripe {
+    width: 100%;
+    height: 9px;
+
+
+    background: repeating-linear-gradient(
+        90deg,
+        var(--red) 0px,
+        var(--red) 28px,
+        var(--white) 28px,
+        var(--white) 56px
+    );
+}
+
+
+
+
+/* =========================================
+   5. CONTEÚDO PRINCIPAL
+========================================= */
+
+
+.container {
+    max-width: 900px;
+    width: 81%;
+    margin: 0 auto;
+}
+
+
+.section {
+    padding-top: 48px;
+}
+
+
+.section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 27px;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 17px;
+}
+
+
+.section-title span {
+    color: var(--red);
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+
+
+
+/* =========================================
+   6. GRID DE PILOTOS
+========================================= */
+
+
+.pilots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+
+.pilot-card {
+    background-color: var(--surface);
+    min-height: 125px;
+    padding: 10px 15px;
+    border-top: 3px solid;
+    transition: transform 0.3s;
+}
+
+
+.pilot-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.ferrari {
+    border-color: var(--ferrari);
+}
+
+
+.mclaren {
+    border-color: var(--mclaren);
+}
+
+
+.mercedes {
+    border-color: var(--mercedes);
+}
+
+
+.audi {
+    border-color: var(--audi);
+}
+
+
+.pilot-number {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 53px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    opacity: 0.45;
+}
+
+
+.ferrari .pilot-number {
+    color: var(--ferrari);
+}
+
+
+.mclaren .pilot-number {
+    color: var(--mclaren);
+}
+
+
+.mercedes .pilot-number {
+    color: var(--mercedes);
+}
+
+
+.audi .pilot-number {
+    color: var(--audi);
+}
+
+
+.pilot-card h3 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+.pilot-card h3 b {
+    font-weight: 900;
+}
+
+
+.pilot-card p {
+    color: var(--gray);
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+
+
+
+/* =========================================
+   7. FILTROS DA CLASSIFICAÇÃO
+========================================= */
+
+
+.filters {
+    display: flex;
+    align-items: flex-end;
+    gap: 11px;
+    margin-bottom: 12px;
+}
+
+
+.filter-group {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.filter-group label,
+.form-group label {
+    display: block;
+    color: var(--gray);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    height: 37px;
+    padding: 0 10px;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--white);
+    outline: none;
+    font-size: 12px;
+}
+
+
+.filter-group input:focus,
+.filter-group select:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--red);
+}
+
+
+.filter-group select option,
+.form-group select option {
+    background-color: var(--surface);
+}
+
+
+.btn-filter {
+    height: 37px;
+    padding: 0 20px;
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.btn-filter:hover {
+    background-color: var(--white);
+    color: var(--background);
+}
+
+
+
+
+/* =========================================
+   8. TABELA DE CLASSIFICAÇÃO
+========================================= */
+
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--surface);
+    font-size: 12px;
+    text-align: left;
+}
+
+
+thead {
+    background-color: var(--surface-light);
+}
+
+
+th {
+    color: var(--gray);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 12px;
+    white-space: nowrap;
+}
+
+
+td {
+    padding: 10px 12px;
+    border-top: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+
+tbody tr {
+    transition: 0.2s;
+}
+
+
+tbody tr:hover {
+    background-color: var(--surface-light);
+}
+
+
+.leader {
+    background-color: rgba(237, 8, 8, 0.13);
+}
+
+
+.position {
+    display: inline-flex;
+    width: 23px;
+    height: 23px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    color: var(--background);
+    font-weight: 900;
+}
+
+
+.position.first {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+
+.pilot-name {
+    border-left: 3px solid;
+    padding-left: 8px;
+}
+
+
+.orange {
+    border-color: var(--mclaren);
+}
+
+
+.red {
+    border-color: var(--ferrari);
+}
+
+
+.turquoise {
+    border-color: var(--mercedes);
+}
+
+
+.gray {
+    border-color: var(--audi);
+}
+
+
+.difference {
+    color: var(--gray);
+    font-size: 10px;
+}
+
+
+.points {
+    font-weight: 900;
+}
+
+
+
+
+/* =========================================
+   9. ÁREA DE INGRESSOS
+========================================= */
+
+
+.tickets-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.3fr;
+    gap: 35px;
+    align-items: start;
+    padding-bottom: 55px;
+}
+
+
+.ticket-description {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 17px;
+}
+
+
+.ticket-warning {
+    background-color: rgba(255, 193, 7, 0.12);
+    border-left: 3px solid #ffcc00;
+    color: #ffcc00;
+    padding: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+
+.ticket-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+}
+
+
+.ticket-price strong {
+    color: var(--red);
+    font-size: 11px;
+}
+
+
+
+
+/* =========================================
+   10. FORMULÁRIO DE INGRESSOS
+========================================= */
+
+
+.ticket-form {
+    background-color: var(--surface);
+    border-top: 4px solid var(--red);
+    padding: 22px;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+
+.form-group {
+    min-width: 0;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 10px;
+    font-size: 12px;
+    outline: none;
+}
+
+
+.form-group input,
+.form-group select {
+    height: 37px;
+}
+
+
+.form-group input[type="file"] {
+    height: auto;
+    padding: 8px;
+    font-size: 11px;
+}
+
+
+.form-group input[type="file"]::file-selector-button {
+    cursor: pointer;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 65px;
+}
+
+
+.form-group small {
+    display: block;
+    color: var(--gray);
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+.btn-reserve {
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+/* =========================================
+   11. RODAPÉ
+========================================= */
+
+
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 20px;
+    text-align: center;
+}
+
+
+.footer p {
+    color: var(--gray);
+    font-size: 10px;
+}
+
+
+.footer strong {
+    color: var(--white);
+}
+
+
+
+
+/* =========================================
+   12. RESPONSIVIDADE - TABLETS
+========================================= */
+
+
+@media (max-width: 900px) {
+
+
+    .container {
+        width: 88%;
+    }
+
+
+    .hero-content {
+        width: 60%;
+    }
+
+
+    .hero-image {
+        width: 47%;
+    }
+
+
+    .tickets-section {
+        gap: 20px;
+    }
+
+
+}
+
+
+
+
+/* =========================================
+   13. RESPONSIVIDADE - CELULARES
+========================================= */
+
+
+@media (max-width: 600px) {
+
+
+    .header {
+        height: auto;
+        min-height: 60px;
+        padding: 12px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+
+    .nav a {
+        font-size: 11px;
+    }
+
+
+    .btn-comprar {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+    }
+
+
+    .hero-content {
+        width: 100%;
+        padding: 38px 6% 25px;
+    }
+
+
+    .hero h1 {
+        font-size: 53px;
+    }
+
+
+    .hero-content p {
+        max-width: 100%;
+    }
+
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+
+    .hero-image {
+        position: relative;
+        width: 100%;
+        height: 230px;
+        border-left: none;
+        border-top: 8px solid var(--red);
+        clip-path: none;
+        background-position: center 55%;
+    }
+
+
+    .hero-stats {
+        left: 5%;
+        right: 5%;
+        bottom: 20px;
+    }
+
+
+    .hero-stats strong {
+        font-size: 28px;
+    }
+
+
+    .container {
+        width: 88%;
+    }
+
+
+    .section {
+        padding-top: 35px;
+    }
+
+
+    .section-title {
+        font-size: 25px;
+    }
+
+
+    .pilots-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+
+    .pilot-card {
+        padding: 10px;
+        min-height: 120px;
+    }
+
+
+    .pilot-number {
+        font-size: 45px;
+    }
+
+
+    .pilot-card h3 {
+        font-size: 11px;
+    }
+
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .filter-group {
+        width: 100%;
+    }
+
+
+    .btn-filter {
+        width: 100%;
+    }
+
+
+    .table-container table {
+        min-width: 600px;
+    }
+
+
+    .tickets-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    .ticket-form {
+        padding: 17px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+
+    .full-width {
+        grid-column: auto;
+    }
+
+
+    .footer {
+        padding: 18px 10px;
+    }
+
+
+    .footer p {
+        line-height: 1.8;
+    }
+
+
+}
